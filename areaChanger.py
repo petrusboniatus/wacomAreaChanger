@@ -22,8 +22,6 @@ def change_wacom_position(mouse_x, mouse_y):
 
 
 lastClick = 0
-
-
 def is_double_click():
     global lastClick
     new_click = time.time()
