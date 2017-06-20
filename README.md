@@ -3,7 +3,7 @@
 This script is a solution to the problem of the wacom awkward area on linux, specially for big screens,
  multiple screen or wide screens.
 
-When it running you just have to **double click the mid mouse button** to center the area mapped on the mouse position,
+When it's running you just have to **double click the mid mouse button** to center the mapped area on the mouse position,
 the area aspect ratio is automatically fixed, you only have to specify the part of the screen you want to use:
  
  ```commandline
