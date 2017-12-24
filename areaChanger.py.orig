@@ -1,7 +1,6 @@
-#!/usr/bin/env python3.5
+#!/usr/bin/env python
 
 from pymouse import PyMouseEvent
-from pymouse import PyMouse
 import subprocess as tux
 import sys
 import shlex
@@ -52,12 +51,12 @@ if len(sys.argv) != 3:
 wacomID = sys.argv[1]
 divisor = float(sys.argv[2])
 
-mouse = PyMouse()
-displayResolution_X, displayResolution_Y = mouse.screen_size()
+displayResolution_X = 6000 
+displayResolution_Y = 2160 
 
 tux.call(shlex.split("xsetwacom --set " + wacomID + " ResetArea"))
 
-_, _, wacom_x, wacom_y = tux.getoutput(" xsetwacom --get " + wacomID + " area").split(" ")
+_, _, wacom_x, wacom_y = tux.check_output(shlex.split(" xsetwacom --get " + wacomID + " area")).split(' ')
 aspectRatioCorrection = (float(displayResolution_X) / float(displayResolution_Y)) / (float(wacom_x) / float(wacom_y))
 
 C = MouseListener()

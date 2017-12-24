@@ -15,7 +15,10 @@ the area aspect ratio is automatically fixed, you only have to specify the part 
 0. Install wacom drivers: I used ```xsetwacom``` on 0.26.0 version 
 1. Install python the dependencies: 
  ```commandline
-    $ pip install PyUserInput 
+    $ apt-get install python-xlib
+    
+    $ pip install Xlib
+    $ pip install pymouse
  ```
  2. Get the id of your wacom pen:
   ```commandline
